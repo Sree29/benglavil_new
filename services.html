@@ -43,6 +43,8 @@
             overflow-x: hidden;
         }
     </style>
+      <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -65,8 +67,7 @@
                     </div>
                     <div class="col md-8">
                         <div class="top-bar-right link-style3">
-                            <a href="#" class="top-mail">contact@benglavil.com</a>
-
+                            <a href="mailto:contact@benglavil.com" class="top-mail">contact@benglavil.com</a>
                         </div>
                     </div>
                 </div>
@@ -883,7 +884,67 @@
 
     </div>
     <!--/.boxed-->
+ <div class="floating-buttons">
+        <!-- Call Button -->
+        <a href="tel:+91 9400011292" class="call-btn" title="Call Now">
+            <i class="ri-phone-line"></i>
+        </a>
 
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/9400011292" class="whatsapp-btn" title="WhatsApp" target="_blank">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+    </div>
+    <style>
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .floating-buttons a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Call Button */
+        .call-btn {
+            background-color: #007bff;
+            /* blue */
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            background-color: #25D366;
+            /* WhatsApp green */
+        }
+
+        /* Responsive: smaller on mobile */
+        @media (max-width: 576px) {
+            .floating-buttons a {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    </style>
     <!-- Javascript -->
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
