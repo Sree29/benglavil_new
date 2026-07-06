@@ -287,8 +287,8 @@
     .faq-q:hover { background: var(--off-white); }
     .faq-q .arrow { font-size: 0.85rem; transition: transform 0.2s; color: var(--green-fresh); }
     .faq-q.open .arrow { transform: rotate(180deg); }
-    .faq-a { padding: 0 22px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.2s; font-size: 0.91rem; color: var(--text-mid); line-height: 1.75; background: var(--off-white); }
-    .faq-a.open { max-height: 300px; padding: 16px 22px 20px; }
+    .faq-a { padding: 0 22px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; font-size: 0.91rem; color: var(--text-mid); line-height: 1.75; background: var(--off-white); }
+    .faq-a.open { max-height: 500px; padding: 16px 22px 20px; }
  
     /* CTA SECTION */
     .cta-section { background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%); text-align: center; padding: 80px 5%; }
@@ -536,10 +536,10 @@
           <div class="col-lg-6">
             <div class="about-content" style="padding-left: 20px;">
               <div class="about-content-title wow fadeInUp">
-                <div class="section-subtitle" style="text-transform: uppercase;">🌿 Best Artificial Grass Company in Kerala</div>
-                <h2 class="section-title" style="font-size:28px; line-height: 1.2; margin-top: 10px; margin-bottom: 20px;">
+                <div class="section-subtitle" style="text-transform: uppercase; font-size: 22px; font-weight: 500;">🌿 Best Artificial Grass Company in Kerala</div>
+                <h3 class="section-title" style="font-size:21px; line-height: 1.2; margin-top: 10px; margin-bottom: 20px;">
                   Premium Synthetic Turf &amp; Lawn Solutions
-                </h2>
+                </h3>
                 <div class="section-desc" style="font-size:16px; line-height: 1.7; margin-bottom: 25px; color: #555;">
                   Benglavil is a leading <strong>artificial grass installation company in Kerala</strong>, providing premium <strong>synthetic turf and artificial lawn solutions</strong> for homes, villas, resorts, schools, commercial properties, and sports facilities. As the <strong>best landscaping company in Kerala</strong> with over 8 years of experience, our high-quality synthetic grass is built to withstand Kerala's heavy monsoons, tropical heat, and year-round humidity — while staying lush, green, and maintenance-free.
                 </div>
@@ -695,7 +695,7 @@
             </div>
             <div class="turf-body">
               <ul>
-                <li>Pile height: 35–40 mm</li>
+                <li>Pile height: 25–40 mm</li>
                 <li>Natural grass appearance</li>
                 <li>Excellent UV protection</li>
                 <li>Soft, realistic texture</li>
@@ -710,7 +710,7 @@
             </div>
             <div class="turf-body">
               <ul>
-                <li>Pile height: 50–60 mm</li>
+                <li>Pile height: 25–40 mm</li>
                 <li>FIFA-quality grade available</li>
                 <li>Shock-absorbing backing</li>
                 <li>Sand/rubber infill system</li>
@@ -725,7 +725,7 @@
             </div>
             <div class="turf-body">
               <ul>
-                <li>Pile height: 20–25 mm</li>
+                <li>Pile height: 25–40 mm</li>
                 <li>Ultra-lightweight design</li>
                 <li>Easy to install &amp; remove</li>
                 <li>Minimal drainage needed</li>
@@ -1211,13 +1211,7 @@
         faq.addEventListener('click', function() {
           this.classList.toggle('open');
           const answer = this.nextElementSibling;
-          if (answer.classList.contains('open')) {
-            answer.classList.remove('open');
-            answer.style.maxHeight = null;
-          } else {
-            answer.classList.add('open');
-            answer.style.maxHeight = answer.scrollHeight + "px";
-          }
+          answer.classList.toggle('open');
         });
       });
     });
